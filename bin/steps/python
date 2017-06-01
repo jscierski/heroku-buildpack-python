@@ -56,6 +56,8 @@ if [ "$FRESH_PYTHON" ] || [[ ! $(pip --version) == *$PIP_VERSION* ]]; then
 
   /app/.heroku/python/bin/python $ROOT_DIR/vendor/get-pip.py &> /dev/null
 
+  pip install --upgrade "setuptools < 36"
+
 fi
 
 set -e
